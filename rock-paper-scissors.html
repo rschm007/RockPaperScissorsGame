@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pseudocode - Rock paper Scissors</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      // variables to define user score, computer score, and replay option
+      var userScore = 0;
+      var computerScore = 0;
+      var replay = true;
+
+      // While user score or computer score is less then 3, keep playing
+      while (userScore || computerScore < 3) {
+
+        // array to define rock, paper, and scissors
+        var rockPaperScissor = ["rock", "paper", "scissors"];
+        
+        // function to have the machine randomly select rock, paper or scissors
+        var compPlay = Math.floor(Math.random()*rockPaperScissor.length);
+
+        // prompt for user to select choice of rock, paper or scissors
+        let userPlay = prompt("Your score: " + userScore + "/n Computer score: " + computerScore + "/n First to 3 wins." + "/n Rock, paper, or scissors?").toLowerCase() {
+          // if userPlay is the same as randomNumber, display prompt that says "Tie"
+          if (userPlay === compPlay) {
+            userPlay = prompt("Tie. /n Your score: " + userScore + "/n Computer score: " + computerScore + "/n First to 3 wins.");
+        }
+
+        // Logic functions
+        // if user plays rock...
+        if (userPlay === "rock") {
+          compPlay === "scissors" ? alert("You played rock, computer played scissors. /n You win!") ? userScore++
+          comPlay === "paper" ? alert ("You played rock, computer played paper. /n Computer wins!") ? computerScore++
+        };
+
+        // if user plays paper...
+        if (userPlay === "paper") {
+          compPlay === "rock" ? alert("You played paper, computer played rock. /n You win!") ? userScore++
+          comPlay === "scissors" ? alert ("You played paper, computer played scissors. /n Computer wins!") ? computerScore++
+        };
+
+        // if user plays scissors...
+        if (userPlay === "scissors") {
+          compPlay === "paper" ? alert("You played scissors, computer played paper. /n You win!") ? userScore++
+          comPlay === "rock" ? alert ("You played scissors, computer played rock. /n Computer wins!") ? computerScore++
+        };
+
+      //Loop is done once win conditions are met. Once met, display the following...
+
+      if (userScore > computerScore) {
+        alert("Congratulation, you won!")
+      } else (computerScore > userScore) {
+        alert("The compuer won. Get gud.")
+      } else (computerScore === userScore)
+        alert ("It's a tie, you are both losers.")
+      };
+
+      // console log to check compPlay
+      console.log(compPlay)
+
+    </script>
+  </body>
+</html>
